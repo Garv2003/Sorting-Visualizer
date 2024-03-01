@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { useSortingAlgorithmContext } from "@/context/Visualizer";
+import React from "react";
+import { UseSortingAlgorithmContext } from "@/context/Visualizer";
 import { Silder } from "@/components/input/Slider";
 import { Select } from "@/components/input/Select";
 import { SortingAlgorithmData, algorithmOptions } from "@/lib/utils";
@@ -20,11 +20,7 @@ const page = () => {
     resetArrayAnimation,
     requireReset,
     runAnimation,
-  } = useSortingAlgorithmContext();
-
-  useEffect(() => {
-    console.log("animationSpeed", animationSpeed);
-  }, [animationSpeed]);
+  } = UseSortingAlgorithmContext();
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedAlgorithm(e.target.value);

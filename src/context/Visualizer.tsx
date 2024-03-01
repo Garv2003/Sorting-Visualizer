@@ -169,7 +169,7 @@ export const SortingAlgorithmProvider = ({
   );
 };
 
-export const useSortingAlgorithmContext = () => {
+export const UseSortingAlgorithmContext = () => {
   const context = useContext(SortingAlgorithmContext);
   if (!context) {
     throw new Error(
