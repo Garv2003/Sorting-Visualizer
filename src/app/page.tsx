@@ -23,7 +23,15 @@ const page = () => {
   } = UseSortingAlgorithmContext();
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedAlgorithm(e.target.value);
+    setSelectedAlgorithm(
+      e.target.value as
+        | "bubble"
+        | "selection"
+        | "insertion"
+        | "merge"
+        | "quick"
+        | "heap"
+    );
   };
 
   const handlePlay = () => {
@@ -54,7 +62,7 @@ const page = () => {
               <Silder
                 isDisabled={isSorting}
                 value={animationSpeed}
-                handleChange={(e) => setAnimationSpeed(e.target.value)}
+                handleChange={(e) => setAnimationSpeed(+e.target.value)}
               />
               <Select
                 isDisabled={isSorting}

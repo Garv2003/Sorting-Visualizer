@@ -11,7 +11,7 @@ export const Silder = ({
   min?: number;
   max?: number;
   step?: number;
-  value: number;
+  value: any;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isDisabled?: boolean;
 }) => {
