@@ -1,4 +1,4 @@
-import { SelectOptionsType } from "@lib/types";
+import { SelectOptionsType } from "../../lib/types";
 
 export const Select = ({
   options,
